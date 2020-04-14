@@ -1,0 +1,57 @@
+@import "../../../../node_modules/taro-ui/dist/style/variables/default";
+.course-banner {
+  background-image: url("../../../assets/course_banner.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  width: 100%;
+  height: 160PX;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  .course-banner-box {
+    width: 90%;
+    border-radius: 12PX;
+    background-color: white;
+    box-shadow: 0 2PX 2PX $color-border-light;
+    height: 64PX;
+    margin-bottom: 4PX;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    .course-banner-box-avatar {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin: 8PX 8PX 0;
+    }
+    .course-banner-box-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: flex-start;
+      margin-left: -8PX;
+      .course-banner-box-name {
+        font-weight: bold;
+      }
+      .course-banner-box-create {
+        font-size: 12PX;
+        color: $color-grey-2;
+      }
+    }
+    .course-banner-box-introduce {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: space-between;
+      margin-right: 8PX;
+      .course-banner-box-reviews {
+        font-size: 12PX;
+        color: $color-grey-2;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+

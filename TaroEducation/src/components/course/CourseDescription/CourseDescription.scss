@@ -1,0 +1,69 @@
+@import "../../../../node_modules/taro-ui/dist/style/variables/default";
+
+.course-description {
+  margin-top: 8PX;
+  .course-description-title {
+    font-weight: bold;
+    margin: 8PX;
+    color: $color-black-1;
+  }
+  .course-description-main {
+    border-radius: 12PX;
+    box-shadow: 0 0 2PX 2PX $color-grey-4;
+    width: 90%;
+    border: 1PX solid $color-border-base;
+    margin: 8PX auto;
+    font-size: 12PX;
+    color: $color-grey-2;
+    padding: 8PX;
+  }
+  .course-description-chapter {
+    border-radius: 12PX;
+    box-shadow: 0 0 2PX 2PX $color-grey-4;
+    width: 90%;
+    border: 1PX solid $color-border-base;
+    margin: 8PX auto;
+    .course-description-chapter-item:first-child {
+      border: none;
+    }
+    .course-description-chapter-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 12PX 8PX 12PX 12PX;
+      border-top: 2PX solid $color-grey-2;
+      .course-description-chapter-item-left {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        .course-description-chapter-img {
+          width: 32PX;
+          height: 32PX;
+          margin: auto 8PX;
+        }
+        .course-description-chapter-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-left: 8PX;
+          .course-description-chapter-title {
+            font-size: 14PX;
+            color: $color-grey-2;
+            font-weight: bold;
+          }
+          .course-description-chapter-type {
+            font-size: 10PX;
+            color: $color-grey-2;
+          }
+        }
+      }
+      .course-description-chapter-order {
+        margin: auto 8PX;
+        font-weight: bold;
+        font-size: 24PX;
+        color: #F2F5FF;
+      }
+    }
+  }
+}

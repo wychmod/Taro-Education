@@ -1,0 +1,45 @@
+@import "../../../../node_modules/taro-ui/dist/style/variables/default";
+.home-courses {
+  margin-left: 16PX;
+  margin-top: 8PX;
+  .home-courses-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 8PX;
+    .home-courses-title {
+      font-size: 14PX;
+      font-weight: bold;
+    }
+    .home-courses-second-title {
+      font-size: 12PX;
+      color: $color-grey-2;
+      margin-right: 16PX;
+    }
+  }
+  .home-courses-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    .home-courses-card {
+      height: 136PX;
+      margin-right: 16PX;
+      background-image: linear-gradient(to bottom right, #7de1ff, $color-brand);
+      border-radius: 12PX;
+      display: flex;
+      flex-direction: column;
+      .home-courses-card-title {
+        font-size: 16PX;
+        font-weight: bold;
+        color: $color-white;
+        margin-left: 8PX;
+        margin-top: 8PX;
+      }
+      .home-courses-card-img {
+        width: 80PX;
+        height: 80PX;
+        margin: 8PX 8PX;
+      }
+    }
+  }
+}

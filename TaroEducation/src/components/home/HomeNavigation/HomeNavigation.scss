@@ -1,0 +1,35 @@
+@import "../../../../node_modules/taro-ui/dist/style/variables/default";
+.home-navigation {
+  width: 88%;
+  border: 1px solid $color-border-base;
+  border-radius: 12PX;
+  box-shadow: 0 2PX 2PX $color-border-light;
+  height: 80PX;
+  margin: -40PX auto 0;
+  padding-right: 8PX;
+  padding-left: 8PX;
+  background-color: $color-bg;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  .home-navigation-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    .home-navigation-item-button {
+      border-radius: $border-radius-circle;
+      background-image: linear-gradient(to bottom right, #7de1ff, $color-brand-light);
+      width: 40PX;
+      height: 40PX;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+    .home-navigation-item-title {
+      font-size: 14PX;
+      text-align: center;
+    }
+  }
+}

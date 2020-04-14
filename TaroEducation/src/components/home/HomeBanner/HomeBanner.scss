@@ -1,0 +1,48 @@
+@import "../../../../node_modules/taro-ui/dist/style/variables/default";
+.home-banner {
+  width: 100%;
+  height: 180PX;
+  background-image: linear-gradient(to top right, $color-brand , #e1ffff);
+  .home-banner-main {
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .home-banner-main-left {
+      width: 50%;
+      .home-banner-img {
+        height: 112PX;
+        padding-top: 16PX;
+        width: 100%;
+      }
+    }
+    .home-banner-main-right {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      .home-banner-main-title {
+        font-size: 28PX;
+        font-weight: bold;
+        margin-top: 16PX;
+      }
+      .home-banner-main-info {
+        color: $color-grey-1;
+        line-height: 42px;
+        font-size: 12PX;
+        font-weight: bold;
+      }
+      .home-banner-main-button {
+        margin-top: 16PX;
+        border-radius: 16PX;
+        width: 80%;
+        background-image: linear-gradient(to top right, #7de1ff, $color-brand);
+        color: white;
+        font-size: 12PX;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 24PX;
+      }
+    }
+  }
+}
