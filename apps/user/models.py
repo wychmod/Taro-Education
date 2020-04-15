@@ -26,6 +26,7 @@ class UserProfile(AbstractUser):
                                       default="head_portrait/v2-97573b50437aac7ae71b73de012470ef_720w.jpg")
     school = models.CharField(max_length=20, null=True, blank=True, verbose_name="学校")
     grade = models.IntegerField(choices=GRADE_TYPE, default=1, verbose_name="年级", help_text="年级")
+    integral = models.IntegerField(default=0, verbose_name="积分", help_text="积分")
 
     class Meta:
         verbose_name = "用户"

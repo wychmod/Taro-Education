@@ -20,6 +20,8 @@ from rest_framework.documentation import include_docs_urls
 from xadmin.plugins import xversion
 from django.views.static import serve
 from rest_framework_jwt.views import obtain_jwt_token
+
+from calendar_incidents.views import CalendarViewset
 from courses.views import CoursesViewset, ChaptersViewset
 from .settings import MEDIA_ROOT
 from rest_framework.routers import DefaultRouter
@@ -30,6 +32,7 @@ xversion.register_models()
 router = DefaultRouter()
 router.register('courses', CoursesViewset, basename="courses")
 router.register('chapter', ChaptersViewset, basename="chapter")
+router.register('calendar', CalendarViewset, basename="calendar")
 
 urlpatterns = [
     path('api/', include(router.urls)),
