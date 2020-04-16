@@ -5,6 +5,7 @@ import Index from './pages/index'
 
 import HomeStore from './store/HomeStore'
 import CourseStore from './store/CourseStore'
+import CalendarStore from './store/CalendarStore'
 import './assets/css/font-awesome.css'
 import './app.scss'
 
@@ -17,6 +18,7 @@ import './app.scss'
 const store = {
   HomeStore,
   CourseStore,
+  CalendarStore,
 };
 
 class App extends Component {

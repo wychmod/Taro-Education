@@ -23,6 +23,7 @@ from rest_framework_jwt.views import obtain_jwt_token
 
 from calendar_incidents.views import CalendarViewset
 from courses.views import CoursesViewset, ChaptersViewset
+from user.views import UserViewset
 from .settings import MEDIA_ROOT
 from rest_framework.routers import DefaultRouter
 xadmin.autodiscover()
@@ -33,6 +34,7 @@ router = DefaultRouter()
 router.register('courses', CoursesViewset, basename="courses")
 router.register('chapter', ChaptersViewset, basename="chapter")
 router.register('calendar', CalendarViewset, basename="calendar")
+router.register('user', UserViewset, basename="user")
 
 urlpatterns = [
     path('api/', include(router.urls)),
@@ -41,5 +43,5 @@ urlpatterns = [
     re_path(r'^media/(?P<path>.*)', serve, {"document_root": MEDIA_ROOT}),
     path('ueditor/', include('DjangoUeditor.urls' )),
     path('doc/', include_docs_urls(title="wychmod学习后台")),
-    path('api-token-auth/', obtain_jwt_token),
+    path('login/', obtain_jwt_token),
 ]

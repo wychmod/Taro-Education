@@ -8,3 +8,11 @@ class TeacherSerializer(serializers.ModelSerializer):
         model = User
         fields = ['name', 'username', 'head_portrait']
 
+
+class UserDetailSerializer(serializers.ModelSerializer):
+    """
+    用户详情序列化类
+    """
+    class Meta:
+        model = User
+        fields = ("name", "gender", "birthday", "email", "mobile", "head_portrait", "school", "grade", "integral")

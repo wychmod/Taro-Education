@@ -1,0 +1,37 @@
+@import "../../../node_modules/taro-ui/dist/style/variables/default";
+.calendar-main {
+  margin: 8PX 0;
+  border-bottom: 1PX solid $color-grey-3;
+  padding-bottom: 8PX;
+}
+.calendar-task {
+  width: 90%;
+  background-color: #EDF4FF;
+  height: 48PX;
+  margin: 8PX auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 8PX;
+  border-radius: 12PX;
+  .calendar-left {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    .calendar-img {
+      height: 40PX;
+      width: 40PX;
+      margin: 8PX auto;
+    }
+    .calendar-title {
+      margin: auto 8PX;
+      font-size: 14PX;
+      font-weight: bold;
+    }
+  }
+  .calendar-right {
+    margin: auto 8PX;
+    font-size: 12PX;
+    color: $color-grey-1;
+  }
+}

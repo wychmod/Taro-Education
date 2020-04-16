@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'courses',
     'article',
     'calendar_incidents',
+    'questionnaire',
     'chat',
     'DjangoUeditor',
     'xadmin',
