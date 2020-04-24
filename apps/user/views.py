@@ -2,9 +2,10 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.backends import ModelBackend
 from django.db.models import Q
 from rest_framework import mixins, viewsets, authentication, permissions
+from rest_framework.permissions import IsAuthenticated
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
-from user.serializer import UserDetailSerializer
+from user.serializer import UserDetailSerializer, UserRankSerializer
 
 User = get_user_model()
 
@@ -40,3 +41,18 @@ class UserViewset(mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.Retri
 
     def get_object(self):
         return self.request.user
+
+
+class RankViewset(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+    排名内容显示
+    list:
+        用户积分排名显示列表
+    """
+    queryset = User.objects.all()
+    authentication_classes = (JSONWebTokenAuthentication, authentication.SessionAuthentication)
+    permission_classes = (IsAuthenticated, )
+    serializer_class = UserRankSerializer
+
+    def get_queryset(self):
+        return self.queryset.order_by('-integral')[:20]

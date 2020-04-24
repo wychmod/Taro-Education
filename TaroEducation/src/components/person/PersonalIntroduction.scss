@@ -1,0 +1,137 @@
+@import "../../../node_modules/taro-ui/dist/style/variables/default";
+.person-main {
+  height: 100%;
+  width: 100%;
+  background-color: $color-grey-5;
+  .person-banner {
+    height: 160PX;
+    background-image: linear-gradient(to right, #E0C8F8 , $color-brand);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .person-card {
+    background-image: url("../../assets/personBanner.jpg");
+    width: 90%;
+    height: 30%;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    margin: -104PX auto 0;
+    left: 5%;
+    border-radius: 12PX;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    .person-card-avatar {
+      margin-top: -40PX;
+      .person-card-avatar-img {
+        height: 80PX;
+        width: 80PX;
+        border-radius: 40PX;
+      }
+    }
+    .person-card-name {
+      font-size: 14PX;
+    }
+    .person-card-sign {
+      font-size: 8PX;
+      color: $color-grey-2;
+      width: 72%;
+    }
+    .person-card-main {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 72%;
+      margin-top: 8PX;
+      margin-bottom: 24PX;
+      .person-card-main-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        .person-card-main-item-number {
+          font-weight: bold;
+        }
+        .person-card-main-item-name {
+          font-size: 12PX;
+          color: $color-grey-2;
+        }
+      }
+    }
+  }
+  .person-school {
+    width: 90%;
+    margin: 8PX auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .person-school-left {
+      width: 48%;
+      height: 64PX;
+      border-radius: 12PX;
+      color: white;
+      font-weight: bold;
+      font-size: 18PX;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #A2BCF1;
+      background-image: url("../../assets/personLeft.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100% 100%;
+    }
+    .person-school-right {
+      width: 48%;
+      height: 64PX;
+      border-radius: 12PX;
+      color: white;
+      font-weight: bold;
+      font-size: 18PX;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #E9D549;
+      background-image: url("../../assets/personRight.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100% 100%;
+    }
+  }
+  .person-button {
+    width: 90%;
+    height: 48PX;
+    border-radius: 12PX;
+    margin: 8PX auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    .person-button-left {
+      margin: auto 16PX;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      .person-button-left-img {
+        width: 24PX;
+        height: 24PX;
+      }
+      .person-button-left-text {
+        margin-left: 16PX;
+        font-size: 18PX;
+      }
+    }
+    .person-button-right {
+      font-size: 24PX;
+      margin: auto 16PX;
+    }
+  }
+}

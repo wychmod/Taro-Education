@@ -6,6 +6,7 @@ import HomeBanner from '../../components/home/HomeBanner/HomeBanner'
 import HomeNavigation from '../../components/home/HomeNavigation/HomeNavigation'
 import HomeCourses from '../../components/home/HomeCourses/HomeCourses'
 import { TABBAR_TYPES } from '../../constants/constants'
+import AuthStore from "../../store/AuthStore";
 
 import './index.scss'
 
@@ -17,7 +18,9 @@ class Index extends Component {
     navigationBarTitleText: '首页'
   };
 
-  componentWillMount () { }
+  componentWillMount () {
+    // AuthStore.login('admin', 'admin');
+  }
 
   componentWillReact () {
     console.log('componentWillReact')

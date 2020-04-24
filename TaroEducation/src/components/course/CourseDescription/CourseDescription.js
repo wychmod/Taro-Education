@@ -24,7 +24,10 @@ class  CourseDescription  extends   Component{
         <View className='course-description-title'>课程步骤</View>
         <View className='course-description-chapter'>
           {simpleChapter && simpleChapter.map(chapter => (
-            <View className='course-description-chapter-item'>
+            <View
+              className='course-description-chapter-item'
+              onClick={() => {Taro.navigateTo({url: `/pages/chapter/chapter?id=${chapter.id}&name=${chapter.title}`});}}
+            >
               <View className='course-description-chapter-item-left'>
                 <Image src={notebook} className='course-description-chapter-img' />
                 <View className='course-description-chapter-content'>

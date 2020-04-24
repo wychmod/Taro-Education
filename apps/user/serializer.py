@@ -15,4 +15,13 @@ class UserDetailSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = User
-        fields = ("name", "gender", "birthday", "email", "mobile", "head_portrait", "school", "grade", "integral")
+        fields = ("name", "gender", "birthday", "email", "mobile", "head_portrait", "school", "grade", "integral", "sign")
+
+
+class UserRankSerializer(serializers.ModelSerializer):
+    """
+    用户积分排名序列化类
+    """
+    class Meta:
+        model = User
+        fields = ['name', 'username', 'head_portrait', 'integral']

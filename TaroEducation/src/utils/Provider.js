@@ -10,7 +10,7 @@ class BaseProvider {
     let axiosNc = axios.create({
       withCredentials: true,
       headers: {
-        "X-CSRFToken": this.CSRFToken,
+        "Authorization": this.CSRFToken,
       },
     });
     axiosNc.interceptors.response.use(response => {
@@ -30,10 +30,13 @@ class BaseProvider {
     return axiosNc;
   }
 
-  refreshCSRFToken = () => {
-    this.CSRFToken = csrf.getCSRFToken();
-
-    return;
+  refreshCSRFToken = (data) => {
+    if (data) {
+      this.CSRFToken = 'JWT '+ data.token;
+      console.log(this.CSRFToken);
+      csrf.setCookie('csrftoken', this.CSRFToken);
+      return;
+    }
   };
 
   sendDataByBeacon = (url, data = null) => {
@@ -43,10 +46,6 @@ class BaseProvider {
      */
     navigator.sendBeacon(url, data);
   };
-
-  setCSRFToken = (token) => {
-    this.CSRFToken = token;
-  }
 
   getInstance() {
     // for compatibility

@@ -1,0 +1,50 @@
+@import "../../../node_modules/taro-ui/dist/style/variables/default";
+.chapter-title {
+  margin: 8PX auto;
+  width: 90%;
+  font-size: 24PX;
+  font-weight: bold;
+}
+.chapter-introduce {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: 90%;
+  height: 64PX;
+  .chapter-avatar {
+    height: 40PX;
+    width: 40PX;
+    border-radius: 50PX;
+    margin: auto 0;
+  }
+  .chapter-teachers {
+    margin: auto 8PX;
+    padding-top: 8PX;
+    display: flex;
+    flex-direction: column;
+    .chapter-teachers-name {
+      font-size: 12PX;
+    }
+    .chapter-teachers-bottom {
+      display: flex;
+      flex-direction: row;
+      .chapter-teachers-addtime {
+        font-size: 10PX;
+        color: $color-grey-2;
+      }
+      .chapter-rate {
+        height: 20PX;
+        width: auto;
+        padding-top: 2PX;
+      }
+    }
+  }
+}
+.chapter-divider {
+  height: 24PX;
+}
+.chapter-rich-text {
+  width: 90%;
+  margin: 0 auto;
+}

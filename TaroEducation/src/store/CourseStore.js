@@ -8,6 +8,7 @@ class CourseStore {
   @observable simpleChapter = [];
   @observable course = null;
   @observable id = 0;
+  @observable chapter = null;
 
   @action initCourse = (id) => {
     if (this.simpleChapter.length !==0 && this.id === id) {
@@ -41,6 +42,22 @@ class CourseStore {
     this.simpleChapterLoading = true;
     BaseProvider.get(`${WEBURL}/api/chapter/?course_id=${this.id}`).then((res) => {
       this.simpleChapter = res.data;
+      console.log(res.data);
+    }).catch((err) => {
+        console.log(err.data);
+      }
+    ).finally(
+      this.simpleChapterLoading = false
+    );
+  }
+
+  @action fetchChapter(id) {
+    if (this.simpleChapterLoading) {
+      return;
+    }
+    this.simpleChapterLoading = true;
+    BaseProvider.get(`${WEBURL}/api/chapter/${id}`).then((res) => {
+      this.chapter = res.data;
       console.log(res.data);
     }).catch((err) => {
         console.log(err.data);

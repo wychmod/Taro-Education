@@ -27,6 +27,7 @@ class UserProfile(AbstractUser):
     school = models.CharField(max_length=20, null=True, blank=True, verbose_name="学校")
     grade = models.IntegerField(choices=GRADE_TYPE, default=1, verbose_name="年级", help_text="年级")
     integral = models.IntegerField(default=0, verbose_name="积分", help_text="积分")
+    sign = models.TextField(null=True, blank=True, verbose_name="个性签名", help_text="个性签名")
 
     class Meta:
         verbose_name = "用户"

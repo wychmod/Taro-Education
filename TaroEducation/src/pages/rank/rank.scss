@@ -1,0 +1,68 @@
+@import "../../../node_modules/taro-ui/dist/style/variables/default";
+.rank-banner {
+  background-image: url("../../assets/rankBanner.jpg");
+  width: 140%;
+  height: 240PX;
+  margin-left: -20%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 92% 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  border-radius: 0 0 50% 50%;
+  flex-direction: column;
+  .rank-banner-avatar {
+    border: 4PX solid white;
+    border-radius: 50PX;
+    .rank-banner-avatar-img {
+      width: 80PX;
+      height: 80PX;
+      border-radius: 50PX;
+    }
+  }
+  .rank-banner-name {
+    font-weight: bold;
+    margin: 8PX 0;
+  }
+  .rank-banner-grade {
+    font-size: 14PX;
+    color: $color-grey-2;
+  }
+}
+.rank-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 64PX;
+  width: 100%;
+  border-bottom: 1PX solid $color-grey-2;
+  .rank-item-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    .rank-item-number {
+      margin: auto 8PX;
+      font-weight: bold;
+      color: $color-grey-2;
+    }
+    .rank-item-img {
+      border-radius: 50PX;
+      height: 48PX;
+      width: 48PX;
+      margin: auto 8PX;
+    }
+    .rank-item-name {
+      font-weight: bold;
+      font-size: 18PX;
+      margin: auto 8PX;
+    }
+  }
+  .rank-item-right {
+    margin: auto 16PX;
+    font-size: 12PX;
+  }
+}
