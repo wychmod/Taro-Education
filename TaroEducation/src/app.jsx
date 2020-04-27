@@ -8,6 +8,7 @@ import CourseStore from './store/CourseStore'
 import CalendarStore from './store/CalendarStore'
 import AuthStore from './store/AuthStore'
 import RankStore from './store/RankStore'
+import QuestionStore from './store/QuestionStore'
 import './assets/css/font-awesome.css'
 import './app.scss'
 
@@ -23,6 +24,7 @@ const store = {
   CalendarStore,
   AuthStore,
   RankStore,
+  QuestionStore,
 };
 
 class App extends Component {
@@ -39,7 +41,8 @@ class App extends Component {
       'pages/calendar/calendar',
       'pages/course/course',
       'pages/login/login',
-      'pages/chapter/chapter'
+      'pages/chapter/chapter',
+      'pages/questionnaire/questionnaire',
     ],
     window: {
       backgroundTextStyle: 'light',

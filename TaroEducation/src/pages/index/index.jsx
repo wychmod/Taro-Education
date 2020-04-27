@@ -5,6 +5,7 @@ import TabBar from '../../components/shared/TabBar/TabBar'
 import HomeBanner from '../../components/home/HomeBanner/HomeBanner'
 import HomeNavigation from '../../components/home/HomeNavigation/HomeNavigation'
 import HomeCourses from '../../components/home/HomeCourses/HomeCourses'
+import HomeQuestion from '../../components/home/HomeQuestion/HomeQuestion'
 import { TABBAR_TYPES } from '../../constants/constants'
 import AuthStore from "../../store/AuthStore";
 
@@ -38,10 +39,11 @@ class Index extends Component {
 
   render () {
     return (
-      <View className='index'>
+      <View className='index-main'>
         <HomeBanner />
         <HomeNavigation />
         <HomeCourses />
+        <HomeQuestion />
         <TabBar current={TABBAR_TYPES.HOME} />
       </View>
     )

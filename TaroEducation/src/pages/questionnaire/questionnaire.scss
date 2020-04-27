@@ -1,0 +1,52 @@
+@import "../../../node_modules/taro-ui/dist/style/variables/default";
+.at-tabs__header {
+  width: 40% !important;
+  margin: 0 auto !important;
+}
+.questionnaire-main {
+  width: 100%;
+  height: 100%;
+}
+.questionnaire-title {
+  font-size: 20PX;
+  width: 90%;
+  margin: 8PX auto;
+  .questionnaire-button {
+    font-size: 18PX;
+    border-radius: 14PX;
+    padding: 0 4PX;
+    color: white;
+    background: linear-gradient(to top right, #7de1ff, $color-brand);
+    float: left;
+  }
+}
+.questionnaire-bottom-button {
+  height: 32PX;
+  width: 64%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16PX auto;
+  border-radius: 14PX;
+  color: white;
+  font-size: 18PX;
+  background: linear-gradient(to top right, #7de1ff, $color-brand);
+  letter-spacing: 8PX
+}
+.at-checkbox__option + .at-checkbox__option .at-checkbox__option-wrap::after {
+  border: none !important;
+}
+.at-checkbox__option-wrap {
+  padding: 16PX 16PX !important;
+}
+.at-checkbox__icon-cnt {
+  width: 20PX !important;
+  height: 20PX !important;
+}
+.at-checkbox__title {
+  font-size: 20PX !important;
+}
+.questionnaire-answer {
+  padding: 16PX 16PX;
+  color: $color-error;
+}

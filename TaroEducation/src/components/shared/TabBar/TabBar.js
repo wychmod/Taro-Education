@@ -13,10 +13,10 @@ class  TabBar  extends Component{
         Taro.navigateTo({url: '/pages/index/index'});
         break;
       case 1:
-        Taro.navigateTo({url: '/pages/chat/chat'});
+        Taro.navigateTo({url: '/pages/course/course'});
         break;
       case 2:
-        Taro.navigateTo({url: '/pages/forum/forum'});
+        Taro.navigateTo({url: '/pages/question/question'});
         break;
       case 3:
         Taro.navigateTo({url: '/pages/person/person'});
@@ -31,8 +31,8 @@ class  TabBar  extends Component{
           fixed
           tabList={[
             { title: '首页', iconType: 'bullet-list' },
-            { title: '聊天', iconType: 'message' },
-            { title: '论坛', iconType: 'edit' },
+            { title: '论坛', iconType: 'message' },
+            { title: '竞赛', iconType: 'edit' },
             { title: '个人', iconType: 'home' }
           ]}
           onClick={this.handleClick}

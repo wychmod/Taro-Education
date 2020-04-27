@@ -1,0 +1,63 @@
+@import "../../../../node_modules/taro-ui/dist/style/variables/default";
+.home-question {
+  margin-top: 8PX;
+  .home-question-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 8PX;
+    .home-question-title {
+      font-size: 14PX;
+      font-weight: bold;
+      margin-left: 16PX;
+    }
+    .home-question-second-title {
+      font-size: 12PX;
+      color: $color-grey-2;
+      margin-right: 16PX;
+    }
+  }
+  .home-question-main {
+    margin-top: 8PX;
+    .home-question-item {
+      width: 90%;
+      height: 64PX;
+      margin: 8PX auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      .home-question-icon {
+        background: linear-gradient(to top right, #7de1ff, $color-brand);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 56PX;
+        width: 56PX;
+        border-radius: 12PX;
+      }
+      .home-question-introduce {
+        height: 80%;
+        margin-left: 16PX;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        .home-question-title {
+          font-size: 16PX;
+          font-weight: bold;
+        }
+        .home-question-introduce-bottom {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-size: 10PX;
+          color: $color-grey-2;
+          .home-question-introduce-item {
+            margin-right: 8PX;
+          }
+        }
+      }
+    }
+  }
+}
