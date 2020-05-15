@@ -41,6 +41,7 @@ class App extends Component {
       'pages/calendar/calendar',
       'pages/course/course',
       'pages/login/login',
+      'pages/register/register',
       'pages/chapter/chapter',
       'pages/questionnaire/questionnaire',
     ],

@@ -1,5 +1,5 @@
 @import "../../../node_modules/taro-ui/dist/style/variables/default";
-.login-text {
+.register-text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,16 +7,6 @@
   font-weight: bold;
   margin: 40PX auto;
 }
-.login-button {
+.register-button {
   margin: 8PX;
-}
-.login-code {
-  width: 144px;
-  height: 72px;
-  background-color: white;
-}
-.login-register {
-  margin-top: 16PX;
-  color: $color-brand;
-  margin-left: 8PX;
 }

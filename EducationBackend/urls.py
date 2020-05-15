@@ -24,7 +24,7 @@ from rest_framework_jwt.views import obtain_jwt_token
 from calendar_incidents.views import CalendarViewset
 from courses.views import CoursesViewset, ChaptersViewset
 from questionnaire.views import QuestionnaireViewset
-from user.views import UserViewset, RankViewset
+from user.views import UserViewset, RankViewset, SmsCodeViewset
 from .settings import MEDIA_ROOT
 from rest_framework.routers import DefaultRouter
 xadmin.autodiscover()
@@ -37,6 +37,7 @@ router.register('chapter', ChaptersViewset, basename="chapter")
 router.register('calendar', CalendarViewset, basename="calendar")
 router.register('user', UserViewset, basename="user")
 router.register('rank', RankViewset, basename="rank")
+router.register('codes', SmsCodeViewset, basename="codes")
 router.register('questionnaire', QuestionnaireViewset, basename="questionnaire")
 
 urlpatterns = [

@@ -4,7 +4,7 @@ from calendar_incidents.models import CalendarIncidents
 from calendar_incidents.serializer import CalendarsSerializer, SimpleCalendarsSerializer
 
 
-class CalendarViewset(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+class CalendarViewset(mixins.ListModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     """
     日历事件查询
     list:

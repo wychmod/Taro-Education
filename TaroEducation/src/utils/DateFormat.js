@@ -17,3 +17,9 @@ export function dateFormat(fmt, date) {
     }
     return fmt;
 }
+
+export function getRandom(start, end) {
+    const length = end - start + 1;
+    let number = parseInt(Math.random() * (length));
+    return number;
+}

@@ -3,6 +3,7 @@ import  {View, Canvas, Image} from  '@tarojs/components';
 import { AtForm, AtInput, AtButton, AtToast } from 'taro-ui';
 import { observer } from '@tarojs/mobx'
 import AuthStore from '../../store/AuthStore';
+import { getRandom } from '../../utils/DateFormat';
 import verificationCode from '../../assets/verification_code.png';
 import './login.scss';
 
@@ -16,13 +17,20 @@ class  login  extends   Component{
       password: '',
       code: '',
       isToast: false,
-      toastText: ''
+      toastText: '',
+      leftNumber: 0,
+      rightNumber: 0,
     }
   }
 
   config = {
     navigationBarTitleText: '登录'
   };
+
+  componentDidMount() {
+    this.handleChangeNumber();
+  }
+
 
   handleChangeUserName (username) {
     this.setState({
@@ -43,7 +51,8 @@ class  login  extends   Component{
   }
 
   onSubmit (event) {
-    if (this.state.code === 'dwse') {
+    const number = this.state.leftNumber + this.state.rightNumber;
+    if (parseInt(this.state.code) === parseInt(number)) {
       AuthStore.login(this.state.username, this.state.password);
     } else {
       this.setState({
@@ -52,6 +61,14 @@ class  login  extends   Component{
       })
     }
   }
+
+
+  handleChangeNumber = () => {
+    this.setState({
+      leftNumber: getRandom(1,10),
+      rightNumber: getRandom(1,10),
+    })
+  };
 
 
   onReset (event) {
@@ -85,17 +102,23 @@ class  login  extends   Component{
           />
           <AtInput
             clear
-            type='text'
-            maxLength='4'
+            type='number'
             placeholder='验证码'
             value={this.state.code}
             onChange={this.handleChangeCode.bind(this)}
           >
-            <Image src={verificationCode} />
+            {/*<Image src={verificationCode} />*/}
+            <View onClick={this.handleChangeNumber}>{this.state.leftNumber} + {this.state.rightNumber} =</View>
           </AtInput>
           <AtButton formType='submit' type='primary' className='login-button'>提交</AtButton>
           <AtButton formType='reset' type='primary' className='login-button'>重置</AtButton>
         </AtForm>
+        <View
+          className='login-register'
+          onClick={()=>{Taro.redirectTo({ url: '/pages/register/register' })}}
+        >
+          账号注册
+        </View>
         {this.state.isToast &&
           <AtToast isOpened text={this.state.toastText} />
         }

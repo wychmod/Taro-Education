@@ -4,9 +4,9 @@ import { observer } from '@tarojs/mobx';
 import { AtRate, AtDivider } from 'taro-ui'
 import CourseStore from '../../store/CourseStore';
 import AuthStore from "../../store/AuthStore";
-import WxParse from '../../components/wxParse/wxParse'
+// import WxParse from '../../components/wxParse/wxParse'
 import { dateFormat } from '../../utils/DateFormat';
-import "../../components/wxParse/wxParse.wxss";
+// import "../../components/wxParse/wxParse.wxss";
 import './chapter.scss'
 
 @observer
@@ -51,7 +51,7 @@ class  chapter  extends   Component{
       const article = chapter.details;
       const course = chapter.course;
       teachers = course.teachers;
-      WxParse.wxParse('article', 'html', article, this.$scope, 10)
+      // WxParse.wxParse('article', 'html', article, this.$scope, 10)
     }
     return (
       <View>
@@ -68,10 +68,10 @@ class  chapter  extends   Component{
             </View>
           </View>
         </View>
-        <import src='../../components/wxParse/wxParse.wxml' />
+        {/*<import src='../../components/wxParse/wxParse.wxml' />*/}
         <AtDivider content='' className='chapter-divider' />
         <View className='chapter-rich-text'>
-          <template is='wxParse' data='{{wxParseData:article.nodes}}'/>
+          {/*<template is='wxParse' data='{{wxParseData:article.nodes}}'/>*/}
         </View>
       </View>
     )

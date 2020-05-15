@@ -43,6 +43,34 @@ class AuthStore {
 
   };
 
+  @action register = (username, password, code) => {
+    if (this.loading) {
+      return;
+    }
+    this.loading = true;
+    BaseProvider.post(`${WEBURL}/api/user/`, {
+      username: username,
+      password: password,
+      code: code,
+      mobile: username
+    }).then((res) => {
+      Taro.showToast({
+        title: '注册成功',
+        icon: 'success',
+        duration: 2000
+      });
+    }).catch((err) => {
+      Taro.showToast({
+        title: '验证码过期',
+        duration: 2000
+      });
+      }
+    ).finally(() => {
+      this.loading = false;
+    }
+    );
+  };
+
   @action getUser() {
     if (this.getUserLoading) {
       return;
@@ -67,6 +95,31 @@ class AuthStore {
         this[key] = partialState[key];
       }
     }
+  }
+
+  @action fetchCode(mobile) {
+    if (this.loading) {
+      return;
+    }
+    this.loading = true;
+    BaseProvider.post(`${WEBURL}/api/codes/`, {
+      mobile: mobile,
+    }).then((res) => {
+      Taro.showToast({
+        title: '验证码发送成功',
+        icon: 'success',
+        duration: 2000
+      });
+    }).catch((err) => {
+        console.log(err.data);
+        Taro.showToast({
+          title: '验证码发送失败',
+          duration: 2000
+        });
+      }
+    ).finally(
+      this.loading = false
+    );
   }
 
 }

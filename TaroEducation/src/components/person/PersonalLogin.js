@@ -16,7 +16,7 @@ class  PersonalLogin  extends   Component{
     return (
       <View className='person-main'>
         <View className='person-banner'>
-          <View className='person-banner-button' onClick={() => Taro.redirectTo({url: '/pages/login/login'})}>登录</View>
+          <View className='person-banner-button' onClick={() => Taro.redirectTo({url: '/pages/login/login'})}>登录/注册</View>
         </View>
         <View className='person-button'>
           <View className='person-button-left'>
